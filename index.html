@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Vober | Comic Art Portfolio</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <span class="logo">JUAN VOBER</span>
+            <div class="nav-links">
+                <a href="#process">Process</a>
+                <a href="#pencil">Pencil</a>
+                <a href="#charcoal">Charcoal</a>
+                <a href="#ink">Pen & Ink</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>JUAN VOBER</h1>
+            <p class="subtitle">Comic Artist | Illustrator</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1: INTERACTIVE PROCESS SLIDERS -->
+        <section id="process" class="gallery-section">
+            <div class="section-header">
+                <h2>Technical Process</h2>
+                <div class="accent-line"></div>
+                <p class="section-desc">Slide to see the transition from raw pencil to finished ink</p>
+            </div>
+            
+            <div class="process-grid">
+                <!-- Slider 1: Lizard -->
+                <div class="process-container">
+                    <div class="process-image ink-layer" style="background-image: url('static/Lizard2.jpeg');"></div>
+                    <div class="process-image pencil-layer" id="p1" style="background-image: url('static/Lizard1.JPG'); width: 50%;"></div>
+                    <input type="range" min="0" max="100" value="50" class="slider" oninput="moveSlider(this.value, 'p1')">
+                    <div class="label">Lizard Study</div>
+                </div>
+
+                <!-- Slider 2: Skull -->
+                <div class="process-container">
+                    <div class="process-image ink-layer" style="background-image: url('static/Skull2.jpeg');"></div>
+                    <div class="process-image pencil-layer" id="p2" style="background-image: url('static/Skull1.jpeg'); width: 50%;"></div>
+                    <input type="range" min="0" max="100" value="50" class="slider" oninput="moveSlider(this.value, 'p2')">
+                    <div class="label">Skull Rendering</div>
+                </div>
+
+                <!-- Slider 3: Spiderman -->
+                <div class="process-container">
+                    <div class="process-image ink-layer" style="background-image: url('static/Spidey2.JPG');"></div>
+                    <div class="process-image pencil-layer" id="p3" style="background-image: url('static/Spidey1.jpeg'); width: 50%;"></div>
+                    <input type="range" min="0" max="100" value="50" class="slider" oninput="moveSlider(this.value, 'p3')">
+                    <div class="label">Spider-Man Illustration</div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- SECTION 2: CATEGORIZED GALLERIES -->
+       <!-- SECTION 2: PENCIL & PAPER -->
+        <section id="pencil" class="gallery-section">
+            <div class="section-header">
+                <h2>Pencil & Paper</h2>
+                <div class="accent-line"></div>
+                <p class="section-desc">Raw graphite sketches and detailed pencil illustrations</p>
+            </div>
+            <div class="standard-grid centered-grid">
+                <!-- Balanced row of four pencil illustrations -->
+                <div class="art-card">
+                    <img src="static/WorldofWarcraft.jpg" alt="World of Warcraft Pencil Sketch">
+                </div>
+                <div class="art-card">
+                    <img src="static/DarkKnight.jpeg" alt="Dark Knight Pencil Illustration">
+                </div>
+                <div class="art-card">
+                    <img src="static/Exoskeloton.jpeg" alt="Exoskeleton Detail Study">
+                </div>
+                <div class="art-card">
+                    <img src="static/Death.jpg" alt="Death Figure Drawing">
+                </div>
+            </div>
+        </section>
+
+       <!-- SECTION 2: CHARCOAL RENDERING -->
+        <section id="charcoal" class="gallery-section">
+            <div class="section-header">
+                <h2>Charcoal Rendering</h2>
+                <div class="accent-line"></div>
+                <p class="section-desc">Works in progress showing form and tonal study</p>
+            </div>
+            <div class="standard-grid centered-grid">
+                <!-- Balanced centering for your two charcoal pieces -->
+                <div class="art-card">
+                    <img src="static/Lady.jpg" alt="Charcoal Study - Lady">
+                </div>
+                <div class="art-card">
+                    <img src="static/Cards.jpeg" alt="Charcoal Study - Cards">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PEN & INK -->
+        <section id="ink" class="gallery-section">
+            <div class="section-header">
+                <h2>Pen & Ink</h2>
+                <div class="accent-line"></div>
+                <p class="section-desc">Finalized ink illustrations and sequential renderings</p>
+            </div>
+            <div class="standard-grid centered-grid">
+                <!-- Balanced centering for your three ink illustrations -->
+                <div class="art-card">
+                    <img src="static/Punisher.jpg" alt="The Punisher Ink Illustration">
+                </div>
+                <div class="art-card">
+                    <img src="static/Titan.jpg" alt="Attack on Titan Ink Illustration">
+                </div>
+                <div class="art-card">
+                    <img src="static/Skull.jpg" alt="Skull Ink Illustration">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Juan Vober | Professional Portfolio</p>
+    </footer>
+
+    <script>
+        function moveSlider(value, layerId) {
+            document.getElementById(layerId).style.width = value + "%";
+        }
+    </script>
+</body>
+</html>
