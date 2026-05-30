@@ -191,32 +191,15 @@ h1 { font-size: clamp(2rem, 10vw, 4rem); letter-spacing: 12px; font-weight: 700;
     display: block;
 }
 
-/* STACK PEN & INK AS 4 ON TOP, 3 CENTERED ON BOTTOM */
+/* STACK PEN & INK AS A 4x2 GRID WITH IDENTICAL SIZES */
 .ink-row-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr); /* Upgraded to a 12-column grid for precise centering alignment */
+    grid-template-columns: repeat(4, 1fr); /* Forces exactly 4 items per row */
     justify-content: center;
     gap: 25px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-/* First 4 items take up 3 columns each on the top row (4x3 = 12 columns total) */
-.ink-row-grid .art-card:nth-child(-n+4) {
-    grid-column: span 3;
-}
-
-/* The 5th item drops down and skips the first 1.5 columns to shift the bottom row right into the center */
-.ink-row-grid .art-card:nth-child(5) {
-    grid-column-start: 2;
-    grid-column-end: span 3;
-}
-
-/* The 6th and 7th items follow naturally, taking up 3 columns each */
-.ink-row-grid .art-card:nth-child(6),
-.ink-row-grid .art-card:nth-child(7) {
-    grid-column: span 3;
 }
 
 .ink-row-grid .art-card {
